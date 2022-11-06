@@ -4,11 +4,30 @@ int  n = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
 int m = 0;
 
-
-while (m<=10)
+if (n>0)
 {
-   int resul = n * m;
-    Console.WriteLine($"{n} x {m} = {resul}");
-     m = m + 1;
+   while (m<=10)
+      {
+         int resul = n * m;
+
+         Console.Write($"{n} x {m} = ");
+         Console.ForegroundColor = ConsoleColor.DarkGreen;
+         Console.WriteLine($"{resul}");
+         Console.ResetColor();
+         
+         m = m + 1;
+      }
+}      
+
+else
+{
+   Console.Write("O número ");
+
+   Console.ForegroundColor = ConsoleColor.DarkRed;
+   Console.Write($"{n} ");
+   Console.ResetColor();
+
+   Console.WriteLine("não é positivo");
 }
+
 Console.WriteLine();
